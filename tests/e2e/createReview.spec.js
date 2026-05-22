@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { ReviewFormPage } from '../../pages/ReviewFormPage.js';  
 import { LoginPage } from '../../pages/LoginPage.js';
-import urls from '../../constants/urls.js';
 import { validUser } from '../../constants/credentials.js';
+// import urls from '../../constants/urls.js';  ← УДАЛИТЬ (не используется)
 
 test.describe('Тесты создания и удаления отзыва', () => {
   test.beforeEach(async ({ page }) => {

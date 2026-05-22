@@ -1,5 +1,5 @@
 import selectors from '../constants/selectors.js';
-import urls from '../constants/urls.js';
+import { baseUrl } from '../constants/urls.js';  // ✅ именованный импорт
 
 class LoginPage {
   constructor(page) {
@@ -16,7 +16,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto(urls.baseUrl);
+    await this.page.goto(baseUrl);  // ✅直接用 baseUrl
     //await this.page.waitForLoadState('networkidle');
   }
 
