@@ -1,5 +1,5 @@
 import selectors from '../constants/selectors.js';
-import { baseUrl } from '../constants/urls.js';  // ✅ именованный импорт
+import { baseUrl } from '../constants/urls.js';
 
 class LoginPage {
   constructor(page) {
@@ -10,7 +10,6 @@ class LoginPage {
     this.loginButton = page.locator(selectors.loginButton);
     this.toaster = page.locator(selectors.toaster);
     
-    // Для совместимости с вашими тестами (loginPage.Message и loginPage.errorMessage)
     this.Message = this.toaster;
     this.errorMessage = this.toaster;
   }
