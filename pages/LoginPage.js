@@ -1,4 +1,4 @@
-mport selectors from '../constants/selectors.js';
+import selectors from '../constants/selectors.js';
 import { baseUrl } from '../constants/urls.js';  // ✅ именованный импорт
 
 class LoginPage {
