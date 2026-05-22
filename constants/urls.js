@@ -1,7 +1,2 @@
-// constants/urls.js
-const urls = {
-  baseUrl: 'https://cinescope.t-qa.ru/',
-  authApi: 'https://auth.dev-cinescope.t-qa.ru',
-};
-
-export default urls;
+export const baseUrl = 'https://cinescope.t-qa.ru/';
+export const authApi = 'https://auth.dev-cinescope.t-qa.ru';
