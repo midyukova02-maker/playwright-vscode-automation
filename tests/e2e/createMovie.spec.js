@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { MovieFormPage } from '../../pages/MovieFormPage.js';
 import { LoginPage } from '../../pages/LoginPage.js';
-import urls from '../../constants/urls.js';
 import { validUser } from '../../constants/credentials.js';
 
 test.describe('Тесты создания фильма', () => {
@@ -18,7 +17,7 @@ test.describe('Тесты создания фильма', () => {
   test('Создание фильма', async ({ page }) => {
     const movieForm = new MovieFormPage(page);
     const newMovie = {
-      title: 'Автотестовый фильм123',
+      title: 'Автотестовый фильм123456',
       description: 'Описание автотестового фильма',
       price: 100,
       location: 'MSK',

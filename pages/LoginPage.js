@@ -16,7 +16,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto(baseUrl);  // ✅直接用 baseUrl
+    await this.page.goto(baseUrl);  // 
     //await this.page.waitForLoadState('networkidle');
   }
 
