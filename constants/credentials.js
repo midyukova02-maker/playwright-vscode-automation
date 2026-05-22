@@ -1,4 +1,3 @@
-// constants/credentials.js
 export const validUser = {
   email: 'test-admin@mail.com',
   password: 'KcLMmxkJMjBD1',

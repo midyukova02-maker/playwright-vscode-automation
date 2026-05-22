@@ -10,7 +10,7 @@ test.describe('API тесты авторизации', () => {
         password: validUser.password,
       },
     });
-    expect(response.status()).toBe(200);
+    expect(response.status()).toBe(201);
   });
 
   test('POST /login - ошибка при неверном пароле', async ({ request }) => {

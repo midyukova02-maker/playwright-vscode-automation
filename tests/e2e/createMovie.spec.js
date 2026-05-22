@@ -1,15 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { MovieFormPage } from '../../pages/MovieFormPage.js';
 import { LoginPage } from '../../pages/LoginPage.js';
-import urls from '../../constants/urls.js';
 import { validUser } from '../../constants/credentials.js';
 
 test.describe('Тесты создания фильма', () => {
   test.beforeEach(async ({ page }) => {
-    // Авторизуемся перед каждым тестом
+    // Авторизуемся перед тестом
     const loginPage = new LoginPage(page);
     await loginPage.goto();
     await loginPage.login(validUser.email, validUser.password);
+    await expect(loginPage.Message).toBeVisible({ timeout: 10000 });
     
     // Ждём успешной авторизации (появления тостера с успешным сообщением)
     await expect(loginPage.Message).toBeVisible({ timeout: 10000 });
@@ -18,7 +18,7 @@ test.describe('Тесты создания фильма', () => {
   test('Создание фильма', async ({ page }) => {
     const movieForm = new MovieFormPage(page);
     const newMovie = {
-      title: 'Автотестовый фильм123',
+      title: 'Автотестовый фильм128',
       description: 'Описание автотестового фильма',
       price: 100,
       location: 'MSK',
