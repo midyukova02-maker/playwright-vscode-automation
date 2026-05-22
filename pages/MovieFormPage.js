@@ -21,7 +21,7 @@ class MovieFormPage {
     this.submitButton = page.locator(selectors.movieForm.submitButton);
     this.successToast = page.locator(selectors.movieForm.successToast);
   }
-
+  
   // 1. Открыть форму создания фильма (весь путь)
   async navigateToCreateForm() {
     await this.createMovieButton.click();
