@@ -5,10 +5,11 @@ import { validUser } from '../../constants/credentials.js';
 
 test.describe('Тесты создания фильма', () => {
   test.beforeEach(async ({ page }) => {
-    // Авторизуемся перед каждым тестом
+    // Авторизуемся перед тестом
     const loginPage = new LoginPage(page);
     await loginPage.goto();
     await loginPage.login(validUser.email, validUser.password);
+    await expect(loginPage.Message).toBeVisible({ timeout: 10000 });
     
     // Ждём успешной авторизации (появления тостера с успешным сообщением)
     await expect(loginPage.Message).toBeVisible({ timeout: 10000 });
