@@ -30,4 +30,4 @@ test.describe('Тесты создания фильма', () => {
     const successMsg = await movieForm.createMovie(newMovie);
     expect(successMsg).toContain('Фильм успешно добавлен');
   });
-});
+});  
