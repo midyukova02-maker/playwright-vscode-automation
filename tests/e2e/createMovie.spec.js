@@ -18,7 +18,7 @@ test.describe('Тесты создания фильма', () => {
   test('Создание фильма', async ({ page }) => {
     const movieForm = new MovieFormPage(page);
     const newMovie = {
-      title: 'Автотестовый фильм123',
+      title: 'Автотестовый фильм12355555',
       description: 'Описание автотестового фильма',
       price: 100,
       location: 'MSK',
